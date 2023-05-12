@@ -84,6 +84,8 @@ export const ArtistItem = styled.li`
 
     h3 {
       cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
 
       &:hover {
         text-decoration: underline;
