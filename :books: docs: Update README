@@ -43,3 +43,7 @@ Se você deseja contribuir para este projeto, sinta-se à vontade para enviar um
 ## 📝 Licença
 
 Esta aplicação está licenciada sob a licença [MIT](https://choosealicense.com/licenses/mit/). Consulte o arquivo LICENSE para obter mais informações.
+
+---
+
+**Desenvolvido com ❤ por [Samuel Gomes](https://github.com/Saesel/).**
