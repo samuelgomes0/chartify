@@ -29,6 +29,15 @@ export const Menu = styled.ul`
     transition: color 0.2s ease-in-out;
     position: relative;
 
+    &.active {
+      color: ${colorPalette.primary};
+
+      &::after {
+        transform: scaleX(1);
+        transform-origin: top;
+      }
+    }
+
     &:after {
       content: "";
       width: 100%;

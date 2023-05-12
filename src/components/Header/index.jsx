@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { Container, Profile, Menu } from "./style";
@@ -15,6 +15,19 @@ export default function Header() {
 
     window.location.href = "/";
   };
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach((item) => {
+      if (item.getAttribute("href") === path) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  }, []);
 
   return (
     <Container>
