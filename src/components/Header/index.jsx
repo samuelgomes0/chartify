@@ -35,7 +35,12 @@ export default function Header() {
         <Menu>
           <li>
             <Link className="menu-item" to="/artists">
-              Artists
+              Top Artists
+            </Link>
+          </li>
+          <li>
+            <Link className="menu-item" to="/followed-artists">
+              Followed Artists
             </Link>
           </li>
           <li>

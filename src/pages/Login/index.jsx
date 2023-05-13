@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import handleAuthorizationCode from "../../services/handleAuthorizationCode";
 import { Container, LeftContainer, RightContainer } from "./style";
 
-export default function Login(props) {
+export default function Login() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
     require("./assets/arcticmonkeys.jpg"),
@@ -19,7 +19,11 @@ export default function Login(props) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((currentImageIndex + 1) % images.length);
+      if (currentImageIndex === images.length - 1) {
+        setCurrentImageIndex(0);
+      } else {
+        setCurrentImageIndex(currentImageIndex + 1);
+      }
     }, 5000);
     return () => clearInterval(interval);
   }, [currentImageIndex, images.length]);
@@ -32,6 +36,7 @@ export default function Login(props) {
         <h1>Welcome!</h1>
         <p>Please, sign in with Spotify to continue</p>
         <button onClick={handleAuthorizationCode}>Sign In</button>
+        <p>This app is not affiliated with Spotify AB.</p>
       </LeftContainer>
       <RightContainer
         id="backgroundImage"

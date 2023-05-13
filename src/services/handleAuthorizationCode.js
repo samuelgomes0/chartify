@@ -3,7 +3,8 @@ import generateRandomString from "../utils/generateRandomString";
 export default function handleAuthorizationCode() {
   const clientId = process.env.REACT_APP_CLIENT_ID;
   const redirectUri = process.env.REACT_APP_REDIRECT_URI;
-  const scope = "user-read-private user-read-email user-top-read";
+  const scope =
+    "user-read-private user-read-email user-top-read user-follow-read";
   const state = generateRandomString(16);
   const url = "https://accounts.spotify.com/authorize";
 

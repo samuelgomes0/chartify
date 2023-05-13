@@ -3,7 +3,7 @@ import { colorPalette } from "../../style/globalStyle";
 
 export const Container = styled.footer`
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 1rem;
   text-align: center;
   color: ${colorPalette.black};

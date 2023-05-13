@@ -41,6 +41,13 @@ export const LeftContainer = styled.div`
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.5px;
+
+    &:last-child {
+      position: absolute;
+      bottom: 1rem;
+      font-size: 14px;
+      color: ${colorPalette.text};
+    }
   }
 
   button {
