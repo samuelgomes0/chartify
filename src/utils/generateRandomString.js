@@ -1,11 +1,14 @@
 export default function generateRandomString() {
   const characters =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  let randomString = "";
+  const charactersLength = characters.length;
+  const length = 16;
 
-  for (let i = 0; i < 16; i++) {
-    randomString += characters[Math.floor(Math.random() * characters.length)];
+  let result = "";
+
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
 
-  return randomString;
+  return result;
 }
