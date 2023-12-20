@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default async function fetchUserTopItems(type, timeRange) {
+export async function fetchUserTopItems(type, timeRange) {
   const options = {
     method: "GET",
     url: `https://api.spotify.com/v1/me/top/${type}`,

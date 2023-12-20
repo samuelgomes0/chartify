@@ -1,3 +1,3 @@
-export default function Skeleton() {
+export function Skeleton() {
   return <div></div>;
 }

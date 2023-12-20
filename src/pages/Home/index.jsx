@@ -1,6 +1,6 @@
-import requestAuthorizationCode from "../../services/requestAuthorizationCode";
+import { requestAuthorizationCode } from "../../services/requestAuthorizationCode";
 
-export default function Home() {
+export function Home() {
   const handleLogin = () => {
     requestAuthorizationCode();
   };

@@ -1,6 +1,6 @@
-import generateRandomString from "../utils/generateRandomString";
+import { generateRandomString } from "../utils/generateRandomString";
 
-export default async function requestAuthorizationCode() {
+export async function requestAuthorizationCode() {
   const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
   const redirectUri = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
   const scopes = "user-read-private user-read-email user-top-read";

@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
-import requestAccessToken from "./services/requestAccessToken";
+import { requestAccessToken } from "./services/requestAccessToken";
 
-export default function App() {
+export function App() {
   useEffect(() => {
     const code = new URLSearchParams(window.location.search).get("code");
 

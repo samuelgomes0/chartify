@@ -1,6 +1,6 @@
-import Menu from "./Menu";
+import { Menu } from "./Menu";
 
-export default function Header() {
+export function Header() {
   return (
     <header className="w-full">
       <Menu />

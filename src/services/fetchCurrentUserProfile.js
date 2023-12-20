@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default async function fetchCurrentUserProfile() {
+export async function fetchCurrentUserProfile() {
   const options = {
     method: "GET",
     url: `https://api.spotify.com/v1/me`,

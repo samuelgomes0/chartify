@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Dashboard from "./pages/Dashboard";
-import Artists from "./pages/Artists";
-import Genres from "./pages/Genres";
-import Tracks from "./pages/Tracks";
+import { Home } from "./pages/Home";
+import { Dashboard } from "./pages/Dashboard";
+import { Artists } from "./pages/Artists";
+import { Genres } from "./pages/Genres";
+import { Tracks } from "./pages/Tracks";
 
-export default function AppRoutes() {
+export function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />

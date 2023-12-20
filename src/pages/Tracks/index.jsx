@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import Header from "../../components/Header";
-import getUserTopitems from "../../services/getUserTopItems";
 
-export default function Tracks() {
+import { Header } from "../../components/Header";
+
+import { fetchUserTopItems } from "../../services/fetchUserTopItems";
+
+export function Tracks() {
   const [tracks, setTracks] = useState([]);
 
   useEffect(() => {
-    getUserTopitems("tracks").then((data) => setTracks(data));
+    fetchUserTopItems("tracks").then((data) => setTracks(data));
   }, []);
 
   console.log(tracks);

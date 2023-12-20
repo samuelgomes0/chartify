@@ -1,7 +1,8 @@
-import Header from "../../components/Header";
-import getUserTopitems from "../../services/getUserTopItems";
+import { Header } from "../../components/Header";
 
-export default function Genres() {
+import { fetchUserTopItems } from "../../services/fetchUserTopItems";
+
+export function Genres() {
   return (
     <>
       <Header />
