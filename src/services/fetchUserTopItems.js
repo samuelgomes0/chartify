@@ -8,7 +8,7 @@ export async function fetchUserTopItems(type, timeRange) {
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
     params: {
-      limit: 48,
+      limit: 50,
       time_range: timeRange,
     },
   };
