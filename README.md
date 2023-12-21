@@ -4,7 +4,7 @@ Aplicação que permite conferir os seus artistas favoritos e as suas músicas m
 
 ## 🛠️ Tecnologias utilizadas
 
-Esta aplicação usa as seguintes tecnologias:
+A aplicação utiliza as seguintes tecnologias:
 
 - **[Vite](https://vitejs.dev/)**
 - **[Axios](https://axios-http.com/ptbr/)**
