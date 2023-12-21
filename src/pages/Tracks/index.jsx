@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
 
 import { Header } from "../../components/Header";
-
-import { fetchUserTopItems } from "../../services/fetchUserTopItems";
 import { Skeleton } from "../Skeleton";
 
+import { fetchUserTopItems } from "../../services/fetchUserTopItems";
+
 export function Tracks() {
+  const [timeRange, setTimeRange] = useState("long_term");
   const [tracks, setTracks] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetchUserTopItems("tracks", "long_term").then((data) => {
+    fetchUserTopItems("tracks", timeRange).then((data) => {
       setTracks(data.items);
       setIsLoading(false);
     });
-  }, []);
+  }, [timeRange]);
 
   const handleClickRedirectToTrack = (id) => {
     window.open(tracks[id].external_urls.spotify);
@@ -28,7 +29,17 @@ export function Tracks() {
     <>
       <Header />
       <section className="m-auto mb-8 flex max-w-[1200px] flex-col">
-        <h1 className="py-12 text-center font-serif text-4xl">Tracks</h1>
+        <h1 className="mb-8 mt-12 text-center font-serif text-4xl">Tracks</h1>
+        <select
+          className="m-auto mb-8 block w-[200px] border-b-2 border-gray-500 bg-transparent py-1 text-center text-sm font-semibold text-gray-500 focus:border-indigo-600 focus:text-indigo-500 focus:outline-none"
+          onChange={(event) => {
+            setTimeRange(event.target.value);
+          }}
+        >
+          <option value="long_term">All Time</option>
+          <option value="medium_term">Last 6 Months</option>
+          <option value="short_term">Last 4 Weeks</option>
+        </select>
         {isLoading ? (
           <Skeleton />
         ) : (
@@ -61,7 +72,7 @@ export function Tracks() {
                       </p>
                     </div>
                     <p
-                      className="cursor-pointer text-xs text-gray-500"
+                      className="cursor-pointer text-xs text-gray-500 hover:underline"
                       onClick={() => {
                         handleClickRedirectToArtist(index);
                       }}

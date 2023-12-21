@@ -1,19 +1,21 @@
 import { useEffect, useState } from "react";
 
 import { Header } from "../../components/Header";
-import { fetchUserTopItems } from "../../services/fetchUserTopItems";
 import { Skeleton } from "../Skeleton";
 
+import { fetchUserTopItems } from "../../services/fetchUserTopItems";
+
 export function Artists() {
+  const [timeRange, setTimeRange] = useState("long_term");
   const [artists, setArtists] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetchUserTopItems("artists", "long_term").then((data) => {
+    fetchUserTopItems("artists", timeRange).then((data) => {
       setArtists(data.items);
       setIsLoading(false);
     });
-  }, []);
+  }, [timeRange]);
 
   const handleClickRedirectToArtist = (id) => {
     window.open(artists[id].external_urls.spotify);
@@ -23,7 +25,17 @@ export function Artists() {
     <>
       <Header />
       <section className="m-auto mb-8 flex max-w-[1200px] flex-col">
-        <h1 className="py-12 text-center font-serif text-4xl">Artists</h1>
+        <h1 className="mb-8 mt-12 text-center font-serif text-4xl">Artists</h1>
+        <select
+          className="m-auto mb-8 block w-[200px] border-b-2 border-gray-500 bg-transparent py-1 text-center text-sm font-semibold text-gray-500 focus:border-indigo-600 focus:text-indigo-500 focus:outline-none"
+          onChange={(event) => {
+            setTimeRange(event.target.value);
+          }}
+        >
+          <option value="long_term">All Time</option>
+          <option value="medium_term">Last 6 Months</option>
+          <option value="short_term">Last 4 Weeks</option>
+        </select>
         {isLoading ? (
           <Skeleton />
         ) : (
