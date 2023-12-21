@@ -11,7 +11,7 @@ export function Home() {
       <p className="mb-5">Please, sign in with Spotify to continue</p>
       <button
         onClick={handleLogin}
-        className="w-6/12 rounded bg-indigo-500 px-6 py-2 font-bold text-white transition-colors hover:bg-indigo-600"
+        className="w-6/12 rounded bg-indigo-500 px-6 py-2 font-bold text-white transition-colors hover:bg-indigo-500 "
       >
         Login
       </button>
