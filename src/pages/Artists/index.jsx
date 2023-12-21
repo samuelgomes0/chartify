@@ -47,6 +47,7 @@ export function Artists() {
                       <p className="text-[0.9rem]">{index + 1}.</p>
                       <p
                         className="cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-[0.9rem] font-semibold hover:underline"
+                        title={name}
                         onClick={() => {
                           handleClickRedirectToArtist(index);
                         }}

@@ -27,8 +27,8 @@ export function Tracks() {
   return (
     <>
       <Header />
-      <section className="m-auto flex max-w-[1200px] flex-col">
-        <h1 className="py-12 text-center font-serif text-4xl">Artists</h1>
+      <section className="m-auto mb-8 flex max-w-[1200px] flex-col">
+        <h1 className="py-12 text-center font-serif text-4xl">Tracks</h1>
         {isLoading ? (
           <Skeleton />
         ) : (
@@ -52,6 +52,7 @@ export function Tracks() {
                       <p className="text-[0.9rem]">{index + 1}.</p>
                       <p
                         className="cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-[0.9rem] font-semibold hover:underline"
+                        title={name}
                         onClick={() => {
                           handleClickRedirectToTrack(index);
                         }}
