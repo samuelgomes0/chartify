@@ -5,6 +5,8 @@ export function Footer() {
       <a
         href="https://twitter.com/samuelgomes0"
         className="font-medium text-indigo-500 hover:underline"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Samuel Gomes
       </a>
