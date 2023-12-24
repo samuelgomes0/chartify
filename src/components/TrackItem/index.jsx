@@ -34,7 +34,7 @@ export function TrackItem({ id, album, name, artists, index, external_urls }) {
           </a>
         </div>
         <a
-          className="text-xs text-gray-500 hover:underline dark:text-gray-400"
+          className="mt-1 text-xs text-gray-500 hover:underline dark:text-gray-400"
           href={artists[0].external_urls.spotify}
           target="_blank"
           rel="noopener noreferrer"
