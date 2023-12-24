@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { Header } from "../../components/Header";
 import { Skeleton } from "../Skeleton";
@@ -17,9 +17,12 @@ export function Artists() {
     });
   }, [timeRange]);
 
-  const handleClickRedirectToArtist = (id) => {
-    window.open(artists[id].external_urls.spotify);
-  };
+  const handleClickRedirectToArtist = useCallback(
+    (id) => {
+      window.open(artists[id].external_urls.spotify);
+    },
+    [artists],
+  );
 
   return (
     <>
@@ -39,13 +42,17 @@ export function Artists() {
         {isLoading ? (
           <Skeleton />
         ) : (
-          <ul className="flex flex-wrap items-start justify-center gap-8 xl:justify-between">
+          <ul className="m-auto flex w-full flex-col flex-nowrap items-start justify-center gap-4 p-4 sm:flex-row sm:flex-wrap sm:gap-8 sm:p-0 xl:justify-between">
             {artists.map(({ id, images, name, genres }, index) => {
               return (
-                <li key={id} className="flex w-[200px] flex-col">
-                  <div className="flex w-[200px] justify-center overflow-hidden rounded-lg shadow-md">
+                <li
+                  key={id}
+                  className="m-auto flex w-full items-center gap-4 sm:mx-0 sm:w-[200px] sm:flex-col sm:items-start sm:justify-start sm:gap-0"
+                >
+                  <div className="flex min-w-[64px] justify-center overflow-hidden rounded-lg shadow-md sm:flex sm:w-[200px]">
                     <img
-                      className="block max-h-[200px] max-w-full cursor-pointer object-cover transition-all duration-200 ease-in-out hover:scale-110"
+                      loading="lazy"
+                      className="max-h-[64px] max-w-full cursor-pointer object-cover transition-all duration-200 ease-in-out hover:scale-110 sm:max-h-[200px]"
                       src={images[0].url}
                       alt={name}
                       title={name}
@@ -54,8 +61,8 @@ export function Artists() {
                       }}
                     />
                   </div>
-                  <div className="mt-2 flex flex-col justify-start">
-                    <div className="mt-1 flex items-center gap-2">
+                  <div className="flex w-full flex-col justify-start sm:mt-2">
+                    <div className="mt-1 flex w-[200px] items-center gap-2 sm:w-full">
                       <p className="text-[0.9rem]">{index + 1}.</p>
                       <p
                         className="cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-[0.9rem] font-semibold hover:underline"

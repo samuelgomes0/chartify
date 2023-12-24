@@ -4,7 +4,7 @@ export function Menu() {
   const { pathname } = useLocation();
 
   return (
-    <nav className="m-auto border-b-[1px] border-zinc-500 bg-zinc-800 py-5">
+    <nav className="m-auto border-b-[1px] border-zinc-500 bg-zinc-800 py-5 text-sm sm:text-base">
       <ul className="flex justify-center gap-8 text-gray-100">
         <Link
           to="/artists"
@@ -15,14 +15,6 @@ export function Menu() {
           Top Artists
         </Link>
         <Link
-          to="/genres"
-          className={`menu-item font-medium hover:text-indigo-400 hover:underline ${
-            pathname === "/genres" ? "text-indigo-400 underline" : ""
-          }`}
-        >
-          Top Genres
-        </Link>
-        <Link
           to="/tracks"
           className={`menu-item font-medium hover:text-indigo-400 hover:underline ${
             pathname === "/tracks" ? "text-indigo-400 underline" : ""
@@ -30,6 +22,14 @@ export function Menu() {
         >
           Top Tracks
         </Link>
+        {/* <Link
+          to="/genres"
+          className={`menu-item font-medium hover:text-indigo-400 hover:underline ${
+            pathname === "/genres" ? "text-indigo-400 underline" : ""
+          }`}
+        >
+          Top Genres
+        </Link> */}
       </ul>
     </nav>
   );

@@ -8,7 +8,7 @@ export function App() {
 
     if (code) {
       requestAccessToken(code).then(() => {
-        window.history.pushState({}, null, "/dashboard");
+        window.history.pushState({}, null, "/artists");
         window.location.reload();
       });
     }
