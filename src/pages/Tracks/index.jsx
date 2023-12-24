@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { Header } from "../../components/Header";
-import { Skeleton } from "../Skeleton";
+import { Skeleton } from "../../components/Skeleton";
 
 import { fetchUserTopItems } from "../../services/fetchUserTopItems";
 import { Footer } from "../../components/Footer";
@@ -40,7 +40,7 @@ export function Tracks() {
         {isLoading ? (
           <Skeleton />
         ) : (
-          <ul className="m-auto flex w-full flex-col flex-nowrap items-start justify-center gap-4 p-4 sm:flex-row sm:flex-wrap sm:gap-8 sm:p-0 xl:justify-between">
+          <ul className="m-auto flex w-full flex-col flex-nowrap items-start justify-center gap-4 px-8 py-4 sm:flex-row sm:flex-wrap sm:gap-8 sm:p-0 xl:justify-between">
             {tracks.map(({ id, album, name, artists }, index) => (
               <li
                 key={id}
@@ -58,8 +58,8 @@ export function Tracks() {
                     }}
                   />
                 </div>
-                <div className="flex w-full flex-col justify-start sm:mt-2">
-                  <div className="mt-1 flex w-[200px] items-center gap-2 sm:w-full">
+                <div className="flex w-full flex-col justify-start overflow-hidden sm:mt-2">
+                  <div className="mt-1 flex w-full items-center gap-2 sm:w-full">
                     <p className="text-[0.9rem]">{index + 1}.</p>
                     <p
                       className="cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap text-[0.9rem] font-semibold hover:underline"
