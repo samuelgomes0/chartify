@@ -4,6 +4,7 @@ import { Header } from "../../components/Header";
 import { Skeleton } from "../Skeleton";
 
 import { fetchUserTopItems } from "../../services/fetchUserTopItems";
+import { Footer } from "../../components/Footer";
 
 export function Artists() {
   const [timeRange, setTimeRange] = useState("long_term");
@@ -82,6 +83,7 @@ export function Artists() {
           </ul>
         )}
       </section>
+      <Footer />
     </>
   );
 }
