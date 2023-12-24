@@ -6,7 +6,7 @@ export function Footer() {
         href="https://twitter.com/samuelgomes0"
         className="font-medium text-indigo-500 hover:underline"
       >
-        Saesel
+        Samuel Gomes
       </a>
     </footer>
   );
