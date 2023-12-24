@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="py-5 text-center text-sm text-black">
+    <footer className="py-5 text-center text-sm text-black dark:text-gray-200">
       Made by{" "}
       <a
         href="https://twitter.com/samuelgomes0"

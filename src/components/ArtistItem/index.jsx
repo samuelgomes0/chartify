@@ -33,7 +33,7 @@ export function ArtistItem({ id, images, name, genres, index, external_urls }) {
             {name}
           </a>
         </div>
-        <p className="text-xs text-gray-500">
+        <p className="text-xs text-gray-500 dark:text-gray-400">
           {genres.length > 0 ? genres[0] : "no genre found"}
         </p>
       </div>

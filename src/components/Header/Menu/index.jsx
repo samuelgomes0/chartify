@@ -4,7 +4,7 @@ export function Menu() {
   const { pathname } = useLocation();
 
   return (
-    <nav className="m-auto border-b-[1px] border-zinc-500 bg-zinc-800 py-5 text-sm sm:text-base">
+    <nav className="m-auto border-b border-zinc-700 bg-zinc-800 py-5 text-sm dark:text-gray-200 sm:text-base">
       <ul className="flex justify-center gap-8 text-gray-100">
         <Link
           to="/artists"
