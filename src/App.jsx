@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 
-import { AppRoutes } from "./routes";
+import { AppRoutes } from "./routes/AppRoutes";
 import { requestAccessToken } from "./services/requestAccessToken";
 
 export function App() {

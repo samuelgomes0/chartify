@@ -14,7 +14,7 @@ export function Tracks() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetchUserTopItems("tracks", timeRange)
+    fetchUserTopItems("tracks", 30, timeRange)
       .then(({ items }) => {
         setTracks(items);
       })
@@ -29,9 +29,14 @@ export function Tracks() {
   return (
     <>
       <Header />
-      <section className="m-auto mb-8 flex max-w-[1200px] flex-col">
-        <h1 className="mb-8 mt-12 text-center font-serif text-4xl">Tracks</h1>
-        <SelectTimeRange setTimeRange={setTimeRange} />
+      <section className="m-auto mb-4 flex max-w-[1200px] flex-col">
+        <h1 className="mb-8 mt-12 text-center font-serif text-4xl">Artists</h1>
+        <div className="mb-4 flex flex-col items-center justify-center gap-8 sm:mb-8 sm:flex-row sm:gap-16">
+          <SelectTimeRange setTimeRange={setTimeRange} />
+          <button className="bg-transparent text-sm font-bold hover:text-indigo-400 hover:underline">
+            Download Image
+          </button>
+        </div>
         {isLoading ? (
           <Skeleton />
         ) : tracks.length === 0 ? (

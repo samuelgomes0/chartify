@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export async function fetchUserTopItems(type, timeRange) {
+export async function fetchUserTopItems(type, limit, timeRange) {
   const options = {
     method: "GET",
     url: `https://api.spotify.com/v1/me/top/${type}`,
@@ -8,7 +8,7 @@ export async function fetchUserTopItems(type, timeRange) {
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
     params: {
-      limit: 50,
+      limit,
       time_range: timeRange,
     },
   };

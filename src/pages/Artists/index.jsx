@@ -7,6 +7,7 @@ import { ArtistItem } from "../../components/ArtistItem";
 import { SelectTimeRange } from "../../components/SelectTimeRange";
 
 import { fetchUserTopItems } from "../../services/fetchUserTopItems";
+import { Link } from "react-router-dom";
 
 export function Artists() {
   const [timeRange, setTimeRange] = useState("long_term");
@@ -14,7 +15,7 @@ export function Artists() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetchUserTopItems("artists", timeRange)
+    fetchUserTopItems("artists", 30, timeRange)
       .then(({ items }) => {
         setArtists(items);
       })
@@ -31,7 +32,15 @@ export function Artists() {
       <Header />
       <section className="m-auto mb-4 flex max-w-[1200px] flex-col">
         <h1 className="mb-8 mt-12 text-center font-serif text-4xl">Artists</h1>
-        <SelectTimeRange setTimeRange={setTimeRange} />
+        <div className="mb-4 flex flex-col items-center justify-center gap-8 sm:mb-8 sm:flex-row sm:gap-16">
+          <SelectTimeRange setTimeRange={setTimeRange} />
+          <Link
+            to="/artists/download"
+            className="bg-transparent text-sm font-bold hover:text-indigo-400 hover:underline"
+          >
+            Download Image
+          </Link>
+        </div>
         {isLoading ? (
           <Skeleton />
         ) : artists.length === 0 ? (
