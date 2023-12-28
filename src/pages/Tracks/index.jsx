@@ -33,9 +33,6 @@ export function Tracks() {
         <h1 className="mb-8 mt-12 text-center font-serif text-4xl">Artists</h1>
         <div className="mb-4 flex flex-col items-center justify-center gap-8 sm:mb-8 sm:flex-row sm:gap-16">
           <SelectTimeRange setTimeRange={setTimeRange} />
-          <button className="bg-transparent text-sm font-bold hover:text-indigo-400 hover:underline">
-            Download Image
-          </button>
         </div>
         {isLoading ? (
           <Skeleton />
