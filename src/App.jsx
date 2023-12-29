@@ -17,7 +17,7 @@ export function App() {
   }, []);
 
   return (
-    <main className="dark:bg-zinc-900 dark:text-gray-200">
+    <main className="min-h-screen dark:bg-zinc-900 dark:text-gray-200">
       <BrowserRouter>
         <AppRoutes />
       </BrowserRouter>

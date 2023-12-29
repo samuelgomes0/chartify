@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { Header } from "../../components/Header";
 import { Skeleton } from "../../components/Skeleton";
@@ -7,7 +8,6 @@ import { ArtistItem } from "../../components/ArtistItem";
 import { SelectTimeRange } from "../../components/SelectTimeRange";
 
 import { fetchUserTopItems } from "../../services/fetchUserTopItems";
-import { Link } from "react-router-dom";
 
 export function Artists() {
   const [timeRange, setTimeRange] = useState("long_term");

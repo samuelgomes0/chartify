@@ -30,7 +30,7 @@ export function Tracks() {
     <>
       <Header />
       <section className="m-auto mb-4 flex max-w-[1200px] flex-col">
-        <h1 className="mb-8 mt-12 text-center font-serif text-4xl">Artists</h1>
+        <h1 className="mb-8 mt-12 text-center font-serif text-4xl">Tracks</h1>
         <div className="mb-4 flex flex-col items-center justify-center gap-8 sm:mb-8 sm:flex-row sm:gap-16">
           <SelectTimeRange setTimeRange={setTimeRange} />
         </div>
