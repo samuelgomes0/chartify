@@ -10,7 +10,7 @@ A aplicação utiliza as seguintes tecnologias:
 - **[Axios](https://axios-http.com/ptbr/)**
 - **[Node.JS](https://nodejs.org/en)**
 - **[React.JS](https://react.dev/)**
-- **[Tailwind CSS](https://styled-components.com/)**
+- **[Tailwind CSS](https://tailwindcss.com/)**
 - **[Spotify API](https://developer.spotify.com/documentation/web-api)**
 
 ## 🔧 Instalação
