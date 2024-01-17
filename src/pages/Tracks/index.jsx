@@ -9,7 +9,7 @@ import { SelectTimeRange } from "../../components/SelectTimeRange";
 import { fetchUserTopItems } from "../../services/fetchUserTopItems";
 
 export function Tracks() {
-  const [timeRange, setTimeRange] = useState("long_term");
+  const [timeRange, setTimeRange] = useState("short_term");
   const [tracks, setTracks] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 

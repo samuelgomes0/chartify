@@ -20,7 +20,10 @@ export function ArtistItem({ id, images, name, genres, index, external_urls }) {
           />
         </a>
       </div>
-      <div className="flex w-full flex-col justify-start overflow-hidden sm:mt-2">
+      <div
+        className="flex w-full flex-col justify-start overflow-hidden sm:mt-2"
+        data-html2canvas-ignore
+      >
         <div className="mt-1 flex w-full items-center gap-2 sm:w-full">
           <p className="text-[0.9rem]">{index + 1}.</p>
           <a

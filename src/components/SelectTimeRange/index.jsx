@@ -7,9 +7,9 @@ export function SelectTimeRange({ setTimeRange }) {
         setTimeRange(event.target.value);
       }}
     >
-      <option value="long_term">All Time</option>
-      <option value="medium_term">Last 6 Months</option>
       <option value="short_term">Last 4 Weeks</option>
+      <option value="medium_term">Last 6 Months</option>
+      <option value="long_term">All Time</option>
     </select>
   );
 }
