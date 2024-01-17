@@ -16,10 +16,10 @@ export function Artists() {
 
   const ref = useRef(null);
 
-  const downloadImage = () => {
+  const handleOpenImage = () => {
     html2canvas(ref.current, {
       useCORS: true,
-      scale: 2,
+      scale: 1,
       removeContainer: true,
       onclone: (document) => {
         document.querySelector(".imgContainer").style.gap = "0";
@@ -28,13 +28,9 @@ export function Artists() {
         });
       },
     }).then((canvas) => {
-      const base64Image = canvas.toDataURL("image/png");
-      const link = document.createElement("a");
-
-      link.setAttribute("href", base64Image);
-      link.setAttribute("download", "artists.png");
-      link.click();
-      link.remove();
+      const image = canvas.toDataURL("image/png");
+      const newTab = window.open();
+      newTab.document.body.innerHTML = `<img src="${image}" alt="artists" />`;
     });
   };
 
@@ -65,10 +61,10 @@ export function Artists() {
             Download Image
           </Link> */}
           <button
-            onClick={downloadImage}
+            onClick={handleOpenImage}
             className="bg-transparent text-sm font-bold hover:text-indigo-400 hover:underline"
           >
-            Download Image
+            Get Image
           </button>
         </div>
         {isLoading ? (
