@@ -1,6 +1,6 @@
 # Spotizou (em desenvolvimento)
 
-Aplicação que permite conferir os seus artistas favoritos e as suas músicas mais tocadas no Spotify. Ele utiliza a API do Spotify para acessar e exibir informações sobre suas preferências musicais.
+Aplicação web que permite conferir estatísticas do seu perfil do Spotify como artistas favoritos e músicas mais ouvidas. Ela utiliza a API do Spotify para acessar e exibir informações sobre suas preferências musicais.
 
 ## 🛠️ Tecnologias utilizadas
 
