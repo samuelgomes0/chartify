@@ -1,4 +1,4 @@
-# Spotizou (em desenvolvimento)
+# Chartify (em desenvolvimento)
 
 Aplicação web que permite conferir estatísticas do seu perfil do Spotify como artistas favoritos e músicas mais ouvidas. Ela utiliza a API do Spotify para acessar e exibir informações sobre suas preferências musicais.
 
