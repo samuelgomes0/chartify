@@ -7,7 +7,7 @@ export function Home() {
 
   return (
     <div className="m-auto flex h-screen flex-col items-center justify-center p-4 text-center sm:w-1/4">
-      <h1 className="mb-2 font-serif text-4xl">Spotizou</h1>
+      <h1 className="mb-2 font-serif text-4xl">Chartify</h1>
       <p className="mb-5">Please, sign in with Spotify to continue</p>
       <button
         onClick={handleLogin}

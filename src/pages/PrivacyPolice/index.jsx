@@ -12,13 +12,13 @@ export function PrivacyPolice() {
         </h1>
         <span className="text-center text-xs">Last Updated: 28/12/2023</span>
         <p className="mt-4">
-          Spotizou is committed to protecting your privacy. This Privacy Policy
+          Chartify is committed to protecting your privacy. This Privacy Policy
           explains how we collect, use, disclose, and safeguard your information
           when you visit our application. By using our application, you consent
           you agree to our Privacy Policy.
         </p>
         <p>
-          Spotizou is not affiliated with Spotify or Spotify AB. Spotify is a
+          Chartify is not affiliated with Spotify or Spotify AB. Spotify is a
           registered trademark of Spotify AB. For more information, please visit
           the{" "}
           <a
@@ -35,7 +35,7 @@ export function PrivacyPolice() {
         <p>
           We do not collect and store any personal information about you. We
           only collect information from your Spotify account to provide you with
-          the Spotizou services. The information we collect is described below:
+          the Chartify services. The information we collect is described below:
         </p>
         <ul className="flex list-inside list-disc flex-col gap-4">
           <li>
@@ -56,11 +56,11 @@ export function PrivacyPolice() {
         <p>
           All data is retrieved from Spotify and displayed to you in real-time.
           We do not share your data with any third parties. We do not use your
-          data for any other purpose than to provide you with the Spotizou
+          data for any other purpose than to provide you with the Chartify
           service.
         </p>
         <p>
-          You can revoke Spotizou's access to your Spotify account at any time
+          You can revoke Chartify's access to your Spotify account at any time
           by visiting your{" "}
           <a
             href="https://www.spotify.com/account/apps/"
