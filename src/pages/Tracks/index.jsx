@@ -17,12 +17,20 @@ export function Tracks() {
   const ref = useRef(null);
 
   const handleDownloadImage = () => {
-    html2canvas(ref.current, {
+    // Antes da captura, forçar o layout a ser o do desktop
+    const imgContainer = ref.current;
+    const originalStyles = imgContainer.style.cssText; // Armazenar os estilos originais
+
+    // Forçar as colunas do desktop
+    imgContainer.style.display = "grid";
+    imgContainer.style.gridTemplateColumns = "repeat(6, 1fr)";
+    imgContainer.style.gap = "8px"; // Ajuste para manter o espaçamento das colunas
+
+    html2canvas(imgContainer, {
       useCORS: true,
       scale: 1,
       removeContainer: true,
       onclone: (document) => {
-        document.querySelector(".imgContainer").style.gap = "0";
         document.querySelectorAll(".rounded-lg").forEach((img) => {
           img.style.borderRadius = "0";
         });
@@ -30,12 +38,16 @@ export function Tracks() {
     }).then((canvas) => {
       const image = canvas.toDataURL("image/png");
 
+      // Criar um elemento <a> para download
       const link = document.createElement("a");
       link.href = image;
-      link.download = "tracks_image.png";
+      link.download = "tracks_image.png"; // Nome do arquivo
       document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      link.click(); // Simular o clique para iniciar o download
+      document.body.removeChild(link); // Remover o link após o download
+
+      // Restaurar os estilos originais após a captura
+      imgContainer.style.cssText = originalStyles;
     });
   };
 
