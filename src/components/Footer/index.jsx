@@ -6,7 +6,7 @@ export function Footer() {
       <p>
         An app by{" "}
         <a
-          href="https://twitter.com/samuelgomes0"
+          href="https://github.com/samuelgomes0/"
           className="font-medium text-indigo-500 hover:underline"
           target="_blank"
           rel="noopener noreferrer"
