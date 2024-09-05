@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 
-import { Header } from "../../components/Header";
-import { Skeleton } from "../../components/Skeleton";
-import { Footer } from "../../components/Footer";
 import { ArtistItem } from "../../components/ArtistItem";
+import { Footer } from "../../components/Footer";
+import { Header } from "../../components/Header";
 import { SelectTimeRange } from "../../components/SelectTimeRange";
+import { Skeleton } from "../../components/Skeleton";
 
-import { fetchUserTopItems } from "../../services/fetchUserTopItems";
 import html2canvas from "html2canvas";
+import { fetchUserTopItems } from "../../services/fetchUserTopItems";
 
 export function Artists() {
   const [timeRange, setTimeRange] = useState("short_term");
@@ -16,7 +16,7 @@ export function Artists() {
 
   const ref = useRef(null);
 
-  const handleOpenImage = () => {
+  const handleDownloadImage = () => {
     html2canvas(ref.current, {
       useCORS: true,
       scale: 1,
@@ -29,8 +29,13 @@ export function Artists() {
       },
     }).then((canvas) => {
       const image = canvas.toDataURL("image/png");
-      const newTab = window.open();
-      newTab.document.body.innerHTML = `<img src="${image}" alt="artists" />`;
+
+      const link = document.createElement("a");
+      link.href = image;
+      link.download = "artists_image.png";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     });
   };
 
@@ -61,7 +66,7 @@ export function Artists() {
             Download Image
           </Link> */}
           <button
-            onClick={handleOpenImage}
+            onClick={handleDownloadImage}
             className="bg-transparent text-sm font-bold hover:text-indigo-400 hover:underline"
           >
             Get Image
