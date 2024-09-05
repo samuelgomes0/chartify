@@ -20,12 +20,12 @@ Para instalar esta aplicação em sua máquina local, siga estas etapas:
 1. Clone este repositório em sua máquina local.
 2. Navegue até o diretório da aplicação no terminal.
 3. Execute o comando `npm install` para instalar as dependências necessárias.
-4. Crie um arquivo `.env` com as seguintes variáveis e atribua a elas os seus respectivos valores (é possível encontrá-los [aqui](https://developer.spotify.com/dashboard)):
+4. Renomeie o arquivo `.env.example` para `.env` e preencha as variáveis com os seus respectivos valores (é possível encontrá-los [aqui](https://developer.spotify.com/dashboard)):
 
 ```
-REACT_APP_CLIENT_ID=SEU_CLIENT_ID
-REACT_APP_CLIENT_SECRET=SEU_CLIENT_SECRET
-REACT_APP_REDIRECT_URI=SUA_REDIRECT_URI
+VITE_SPOTIFY_CLIENT_ID=SEU_CLIENT_ID
+VITE_SPOTIFY_CLIENT_SECRET=SEU_CLIENT_SECRET
+VITE_SPOTIFY_REDIRECT_URI=SUA_REDIRECT_URI
 ```
 
 5. Execute o comando `npm run dev` para iniciar o servidor local.
