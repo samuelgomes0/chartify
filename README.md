@@ -1,51 +1,76 @@
-# Chartify (em desenvolvimento)
+# Chartify
 
-Aplicação web que permite conferir estatísticas do seu perfil do Spotify como artistas favoritos e músicas mais ouvidas. Ela utiliza a API do Spotify para acessar e exibir informações sobre suas preferências musicais.
+**Desvende suas estatísticas musicais de forma visual e interativa.**
 
-## 🛠️ Tecnologias utilizadas
+Chartify é uma aplicação web que transforma seus dados de audição no Spotify em gráficos e estatísticas personalizadas. Descubra seus artistas favoritos, músicas mais ouvidas, e explore suas tendências musicais ao longo do tempo com uma interface moderna e intuitiva. Ideal para qualquer entusiasta da música que deseja mergulhar fundo em seus hábitos de audição.
 
-A aplicação utiliza as seguintes tecnologias:
+## 🛠 Tecnologias Utilizadas
 
 - **[Vite](https://vitejs.dev/)**
 - **[Axios](https://axios-http.com/ptbr/)**
-- **[Node.JS](https://nodejs.org/en)**
+- **[Node.js](https://nodejs.org/en)**
 - **[React.JS](https://react.dev/)**
 - **[Tailwind CSS](https://tailwindcss.com/)**
 - **[Spotify API](https://developer.spotify.com/documentation/web-api)**
 
-## 🔧 Instalação
+## ✨ Funcionalidades Principais
+
+- **Análise de Músicas e Artistas Favoritos**  
+   Visualize os artistas e músicas que você mais ouviu, filtrados por períodos como últimos 30 dias, últimos 6 meses ou todos os tempos.
+
+- **Estatísticas de Gêneros e Tendências**  
+   Veja um resumo detalhado de quais gêneros musicais você tem explorado e descubra suas tendências musicais ao longo do tempo.
+
+- **Integração Direta com o Spotify**  
+   Utilize sua conta Spotify para fazer login e permitir que Chartify acesse suas estatísticas, mantendo sua privacidade e segurança.
+
+- **Interface Gráfica Intuitiva**  
+   Gráficos interativos e personalizáveis para uma experiência de análise divertida e envolvente.
+
+## ⚙️ Instalação
 
 Para instalar esta aplicação em sua máquina local, siga estas etapas:
 
-1. Clone este repositório em sua máquina local.
-2. Navegue até o diretório da aplicação no terminal.
-3. Execute o comando `npm install` para instalar as dependências necessárias.
+1. Clone este repositório em sua máquina local:
+   ```bash
+   git clone https://github.com/seu-usuario/chartify.git
+   ```
+
+2. Navegue até o diretório da aplicação no terminal:
+   ```bash
+   cd chartify
+   ```
+
+3. Execute o comando para instalar as dependências necessárias:
+   ```bash
+   npm install
+   ```
+
 4. Renomeie o arquivo `.env.example` para `.env` e preencha as variáveis com os seus respectivos valores (é possível encontrá-los [aqui](https://developer.spotify.com/dashboard)):
 
-```
-VITE_SPOTIFY_CLIENT_ID=SEU_CLIENT_ID
-VITE_SPOTIFY_CLIENT_SECRET=SEU_CLIENT_SECRET
-VITE_SPOTIFY_REDIRECT_URI=SUA_REDIRECT_URI
-```
+   ```bash
+   VITE_SPOTIFY_CLIENT_ID=SEU_CLIENT_ID
+   VITE_SPOTIFY_CLIENT_SECRET=SEU_CLIENT_SECRET
+   VITE_SPOTIFY_REDIRECT_URI=SUA_REDIRECT_URI
+   ```
 
-5. Execute o comando `npm run dev` para iniciar o servidor local.
-6. Acesse a página inicial da aplicação no seu navegador (por exemplo, http://localhost:5173).
+5. Execute o comando para iniciar o servidor local:
+   ```bash
+   npm run dev
+   ```
+
+6. Acesse a página inicial da aplicação no seu navegador (por exemplo, [http://localhost:5173](http://localhost:5173)).
 
 ## 🤝 Contribuindo
 
-Se você deseja contribuir para este projeto, sinta-se à vontade para enviar um pull request. Antes de enviar um pull request, certifique-se de seguir estas etapas:
+Se você deseja contribuir para este projeto, siga os passos:
 
-1. Crie um fork deste repositório.
-2. Crie um branch para sua nova funcionalidade (`git checkout -b my-new-feature`).
-3. Faça as alterações necessárias.
-4. Commit suas alterações (`git commit -am 'Add some feature'`).
-5. Envie para o branch (`git push origin my-new-feature`).
-6. Crie um novo pull request.
+1. Faça um fork deste repositório.
+2. Crie uma nova branch com a sua funcionalidade (`git checkout -b minha-feature`).
+3. Commit suas mudanças (`git commit -m 'Adicionar minha nova feature'`).
+4. Envie para a branch (`git push origin minha-feature`).
+5. Abra um Pull Request.
 
 ## 📝 Licença
 
-Esta aplicação está licenciada sob a licença [MIT](https://choosealicense.com/licenses/mit/). Consulte o arquivo LICENSE para obter mais informações.
-
----
-
-**Desenvolvido com ❤ por [Samuel Gomes](https://github.com/Saesel/).**
+Este projeto está licenciado sob a **MIT License** – veja o arquivo [LICENSE](LICENSE) para mais detalhes.
